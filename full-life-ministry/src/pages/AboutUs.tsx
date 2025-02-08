@@ -7,7 +7,7 @@ const AboutUs = () => {
         people grow in their faith.
       </p>
       <h3>Founders</h3>
-      <p>Pastor John Doe and Evangelist Jane Doe</p>
+      <p>Bishop Ken Chivington and Bishop Dawn Chivington</p>
     </div>
   );
 };

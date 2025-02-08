@@ -1,14 +1,12 @@
-interface NavigationProps {
-  brand: string;
-}
+import { Link } from "react-router-dom";
 
-const Navigation = ({ brand }: NavigationProps) => {
+const Navigation = ({ brand }: { brand: string }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a href="/" className="navbar-brand">
+        <Link to="/" className="navbar-brand">
           {brand}
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,35 +21,29 @@ const Navigation = ({ brand }: NavigationProps) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="/aboutus" className="nav-link">
+              <Link to="/about" className="nav-link">
                 AboutUs
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/schedule" className="nav-link">
+              <Link to="/schedule" className="nav-link">
                 Schedule
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/branches" className="nav-link">
+              <Link to="/branches" className="nav-link">
                 Branches
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/fellowships" className="nav-link">
+              <Link to="/fellowships" className="nav-link">
                 Fellowships
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a href="/discipleship" className="nav-link">
-                Discipleship
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/donate" className="nav-link">
+              <Link to="/donate" className="nav-link">
                 Donate
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
