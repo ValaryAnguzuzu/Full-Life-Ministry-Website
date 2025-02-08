@@ -1,7 +1,6 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
-import DarkModeToggle from "./components/DarkModeToggle";
+import DarkModeToggle from "./components/DarkMode";
 import Carousel from "./components/Carousel";
 import Home from "./pages/Home";
 import Schedule from "./pages/Schedule";
@@ -12,12 +11,12 @@ import Discipleship from "./pages/Discipleship";
 import Donate from "./pages/Donate";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Router>
-      <DarkModeToggle />
-      <Navigation />
-      <Carousel />
+      <DarkModeToggle isDarkMode={false} toggleDarkMode={() => {}} />
+      <Navigation brand="Full Life Ministry" />
+      <Carousel images={[]} />
       <div className="container mt-4">
         <Routes>
           <Route path="/" element={<Home />} />

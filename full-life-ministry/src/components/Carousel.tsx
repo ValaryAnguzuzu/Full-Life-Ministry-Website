@@ -1,50 +1,44 @@
-import React from "react";
+interface CarouselProps {
+  images: string[];
+}
 
-const Carousel: React.FC = () => (
-  <div id="churchCarousel" className="carousel slide" data-bs-ride="carousel">
-    <div className="carousel-inner">
-      <div className="carousel-item active">
-        <img
-          src="/path/to/image1.jpg"
-          className="d-block w-100"
-          alt="Event 1"
-        />
-        <div className="carousel-caption d-none d-md-block">
-          <h5>Welcome to Full Life Ministry</h5>
-          <p>Join us for worship and fellowship.</p>
-        </div>
+const Carousel = ({ images }: CarouselProps) => {
+  return (
+    <div
+      id="carouselExample"
+      className="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div className="carousel-inner">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`carousel-item ${index === 0 ? "active" : ""}`}
+          >
+            <img src={image} className="d-block w-100" alt="..." />
+          </div>
+        ))}
       </div>
-      <div className="carousel-item">
-        <img
-          src="/path/to/image2.jpg"
-          className="d-block w-100"
-          alt="Event 2"
-        />
-        <div className="carousel-caption d-none d-md-block">
-          <h5>Weekly Events</h5>
-          <p>Discover our weekly activities.</p>
-        </div>
-      </div>
+      <button
+        className="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button
+        className="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExample"
+        data-bs-slide="next"
+      >
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="visually-hidden">Next</span>
+      </button>
     </div>
-    <button
-      className="carousel-control-prev"
-      type="button"
-      data-bs-target="#churchCarousel"
-      data-bs-slide="prev"
-    >
-      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Previous</span>
-    </button>
-    <button
-      className="carousel-control-next"
-      type="button"
-      data-bs-target="#churchCarousel"
-      data-bs-slide="next"
-    >
-      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Next</span>
-    </button>
-  </div>
-);
+  );
+};
 
 export default Carousel;
