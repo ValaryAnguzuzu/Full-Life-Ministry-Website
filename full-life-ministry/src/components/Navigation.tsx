@@ -23,6 +23,11 @@ const Navigation = ({ brand }: NavigationProps) => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
+              <a href="/aboutus" className="nav-link">
+                AboutUs
+              </a>
+            </li>
+            <li className="nav-item">
               <a href="/schedule" className="nav-link">
                 Schedule
               </a>
@@ -30,6 +35,17 @@ const Navigation = ({ brand }: NavigationProps) => {
             <li className="nav-item">
               <a href="/branches" className="nav-link">
                 Branches
+              </a>
+            </li>
+            <li className="nav-item">
+              <a href="/fellowships" className="nav-link">
+                Fellowships
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a href="/discipleship" className="nav-link">
+                Discipleship
               </a>
             </li>
             <li className="nav-item">
