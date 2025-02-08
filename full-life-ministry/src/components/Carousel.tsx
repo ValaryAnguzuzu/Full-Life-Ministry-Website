@@ -6,7 +6,7 @@ const Carousel = ({ images }: CarouselProps) => {
   return (
     <div
       id="carouselExample"
-      className="carousel slide"
+      className="carousel slide mt-5"
       data-bs-ride="carousel"
     >
       <div className="carousel-inner">
@@ -15,7 +15,11 @@ const Carousel = ({ images }: CarouselProps) => {
             key={index}
             className={`carousel-item ${index === 0 ? "active" : ""}`}
           >
-            <img src={image} className="d-block w-100" alt="..." />
+            <img
+              src={image}
+              className="d-block w-100"
+              alt="{`Slide ${index}`}"
+            />
           </div>
         ))}
       </div>

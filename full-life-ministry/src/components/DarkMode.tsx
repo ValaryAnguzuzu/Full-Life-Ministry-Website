@@ -8,8 +8,13 @@ const DarkModeToggle = ({
   toggleDarkMode,
 }: DarkModeToggleProps) => {
   return (
-    <button onClick={toggleDarkMode} className="btn btn-outline-primary">
-      {isDarkMode ? "Light Mode" : "Dark Mode"}
+    <button
+      onClick={toggleDarkMode}
+      className={`btn ${
+        isDarkMode ? "btn-dark" : "btn-light"
+      } end-0 m-3`}
+    >
+      {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
     </button>
   );
 };

@@ -17,7 +17,7 @@ const App = () => {
       <DarkModeToggle isDarkMode={false} toggleDarkMode={() => {}} />
       <Navigation brand="Full Life Ministry" />
       <Carousel images={[]} />
-      <div className="container mt-4">
+      <div className="container mt-5 pt-5">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/schedule" element={<Schedule />} />
